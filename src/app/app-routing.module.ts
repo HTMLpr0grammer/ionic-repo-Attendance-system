@@ -21,7 +21,11 @@ const routes: Routes = [
   {
     path: 'first',
     loadChildren: () => import('./first/first.module').then( m => m.FirstPageModule)
+  },  {
+    path: 'qrcode',
+    loadChildren: () => import('./qrcode/qrcode.module').then( m => m.QRCodePageModule)
   }
+
 ];
 @NgModule({
   imports: [

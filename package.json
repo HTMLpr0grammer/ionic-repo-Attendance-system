@@ -28,6 +28,7 @@
     "@capacitor/status-bar": "6.0.0",
     "@ionic/angular": "^8.0.0",
     "@ionic/cli": "^7.2.0",
+    "angularx-qrcode": "^17.0.1",
     "ig": "^0.0.5",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
