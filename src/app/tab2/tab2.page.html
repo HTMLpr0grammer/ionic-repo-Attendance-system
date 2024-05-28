@@ -1,12 +1,78 @@
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Records</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  
-
+<ion-content>
+  <div class="container">
+    <aside class="sidebar">
+        <h2>SUBJECTS</h2>
+      <nav class="nav">
+        <ul>
+           
+            <li><a href="#">Programming 2</a></li>
+            <li><a href="#">PathFit 2</a></li>
+            <li><a href="#">ROTC 2</a></li>
+            <li><a href="#">Professional Issues in Information System</a></li>
+            <li><a href="#">Human Computer Interaction</a></li>
+        </ul>
+    </nav>
+    <footer class="footer">
+        <p>&copy; Copyright Student Attendance System</p>
+    </footer>
+    </aside>
+    <main class="main-content">
+        <h1>Profile</h1>
+        <div class="attendance-record">
+            <h2>Attendance Record</h2>
+            <div class="record-options">
+                <div class="show-entries">
+                    <label for="entries">Show entries:</label>
+                    <select id="entries" name="entries">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="search">
+                    <input type="text" id="search" name="search" placeholder="Search...">
+                    <button>Search</button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Student No</th>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Remarks</th>
+                        <th>Course</th>
+                        <th>Subjects</th>
+                        <th>Time In</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>22S226S</td>
+                        <td>Blaise Tyrel</td>
+                        <td>Billones</td>
+                        <td>Daga</td>
+                        <td><div class="circle"></div></td>
+                        <td>BSIS</td>
+                        <td>Programming</td>
+                        <td>1:00</td>
+                    </tr>
+                    <!-- Additional rows as needed -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <p>Showing 1 to 10 of 15 entries</p>
+                <div class="nav-buttons">
+                    <button>Previous</button>
+                    <button>Next</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
 </ion-content>
-
