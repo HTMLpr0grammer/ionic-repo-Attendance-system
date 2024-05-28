@@ -1,36 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-
-body {
+body, ion-content {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('zdspgc4.jpg') no-repeat;
+    margin: 0;
+    padding: 0;
+    background: url('zdspgc4.jpg') no-repeat center center;
     background-size: 60%;
-    background-position: center;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 400px;
-
 }
 
 form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .form-group {
     margin-bottom: 15px;
+    width: 100%;
 }
 
 label {
@@ -40,9 +43,9 @@ label {
 }
 
 input {
-    width: 50%;
+    width: 100%;
     padding: 8px;
-    border: 1px solid #ccc5c5;
+    border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
