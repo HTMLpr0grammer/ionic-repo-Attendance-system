@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body, ion-content {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #27ae60;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  position: fixed;
+}
+
+.profile {
+  text-align: center;
+  padding: 20px;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav ul li {
+  padding: 15px 20px;
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav ul li a:hover {
+  background-color: #2ecc71;
+  display: block;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  flex: 1;
+  background-color: #ecf0f1;
+  min-height: 100vh;
+}
+
+.registration-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+  text-align: center;
+}
+
+.registration-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.form-item {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.form-item:last-child {
+  margin-right: 0;
+}
+
+ion-label {
+  font-weight: 500;
+}
+
+.register-button {
+  background-color: #27ae60;
+  color: white;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.register-button:hover {
+  background-color: #219150;
+}
