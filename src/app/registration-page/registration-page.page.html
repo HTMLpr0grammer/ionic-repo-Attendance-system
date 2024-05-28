@@ -1,13 +1,60 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>RegistrationPage</ion-title>
+    <ion-title>Registration</ion-title>
+    <link rel="stylesheet" href="registration.css">
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">RegistrationPage</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="../../assets/icon/zdspgc_logo-removebg-preview.png" class="logo">
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">"Welcome to our Attendance System! Register to begin tracking your attendance effortlessly. Stay organized, never miss a class, and streamline your academic journey with our user-friendly platform. Let's start managing your attendance efficiently!"</a></li>
+        </ul>
+      </nav>
+      <footer class="footer">
+        <p>&copy; 2024 Student Attendance System</p>
+      </footer>
+    </aside>
+    <main class="main-content">
+      <div class="registration-form">
+        <h2>Register</h2>
+        <form>
+          <div class="form-row">
+            <ion-item class="form-item">
+              <ion-label position="floating">First Name</ion-label>
+              <ion-input type="text" required></ion-input>
+            </ion-item>
+            <ion-item class="form-item">
+              <ion-label position="floating">Middle Name</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item class="form-item">
+              <ion-label position="floating">Last Name</ion-label>
+              <ion-input type="text" required></ion-input>
+            </ion-item>
+          </div>
+          <div class="form-row">
+            <ion-item class="form-item">
+              <ion-label position="floating">Course</ion-label>
+              <ion-input type="text" required></ion-input>
+            </ion-item>
+            <ion-item class="form-item">
+              <ion-label position="floating">Year Level</ion-label>
+              <ion-input type="text" required></ion-input>
+            </ion-item>
+            <ion-item class="form-item">
+              <ion-label position="floating">Student Number</ion-label>
+              <ion-input type="text" required></ion-input>
+            </ion-item>
+          </div>
+          <ion-button expand="block" type="submit" class="register-button">Register</ion-button>
+        </form>
+      </div>
+    </main>
+  </div>
 </ion-content>
