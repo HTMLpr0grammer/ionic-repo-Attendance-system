@@ -1,42 +1,57 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-
-declare var QRCode: any;
+import { Component, OnInit } from '@angular/core';
+import * as QRCode from 'qrcode';
 
 @Component({
-  selector: 'app-qrcode',
+  selector: 'app-tab3',
   templateUrl: './tab3.page.html',
   styleUrls: ['./tab3.page.scss'],
 })
-export class Tab3Page implements OnInit, AfterViewInit {
+export class Tab3Page implements OnInit {
+
   constructor() {}
 
   ngOnInit() {}
 
-  ngAfterViewInit() {
-    const form = document.getElementById('qr-form') as HTMLFormElement;
-    form.addEventListener('submit', this.generateQRCode.bind(this));
+  async generateQRCode(studentName: string, course: string) {
+    const text = `Student: ${studentName}, Course: ${course}`;
+    const qrCodeContainer = document.getElementById('qrcode');
+    if (qrCodeContainer) {
+      qrCodeContainer.innerHTML = ''; // Clear previous QR code
+      try {
+        const qrCode = await QRCode.toDataURL(text);
+        const img = document.createElement('img');
+        img.src = qrCode;
+        qrCodeContainer.appendChild(img);
+        this.showPopup();
+      } catch (error) {
+        console.error('Error generating QR code', error);
+      }
+    }
   }
 
-  generateQRCode(event: Event) {
+  showPopup() {
+    const qrPopup = document.getElementById('qrPopup');
+    if (qrPopup) {
+      qrPopup.style.display = 'block';
+    }
+  }
+
+  closePopup() {
+    const qrPopup = document.getElementById('qrPopup');
+    if (qrPopup) {
+      qrPopup.style.display = 'none';
+    }
+  }
+
+  onSubmit(event: Event) {
     event.preventDefault();
-
-    const date = (document.getElementById('date') as HTMLInputElement).value;
-    const className = (document.getElementById('class') as HTMLInputElement).value;
-    const startTime = (document.getElementById('start-time') as HTMLInputElement).value;
-    const endTime = (document.getElementById('end-time') as HTMLInputElement).value;
-
-    const qrData = `Date: ${date}\nClass: ${className}\nStart Time: ${startTime}\nEnd Time: ${endTime}`;
-
-    const qrCodeElement = document.getElementById('qrcode');
-
-    new QRCode(qrCodeElement, {
-      text: qrData,
-      width: 256,
-      height: 256,
-      colorDark: "#000000",
-      colorLight: "#ffffff",
-      correctLevel: QRCode.CorrectLevel.H
-    });
+    const studentName = (document.getElementById('studentName') as HTMLInputElement).value;
+    const course = (document.getElementById('course') as HTMLInputElement).value;
+    if (studentName && course) {
+      this.generateQRCode(studentName, course);
+    } else {
+      alert('Please fill in both fields.');
+    }
   }
 }
 

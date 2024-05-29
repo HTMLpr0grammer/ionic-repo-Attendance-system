@@ -6,11 +6,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('zdspgc4.jpg') no-repeat;
-    background-size: 60%;
+    background: url('zsssss.jpg') no-repeat;
+    background-size:100%;
     background-position: center;
 }
-
 .container {
     background: transparent;
     padding: 20px;
@@ -20,7 +19,6 @@ body {
     text-align: center;
     width: 400px;
     margin: 0 auto;
-
 }
 
 form {
@@ -73,17 +71,21 @@ button:hover {
 }
 
 .qr-popup-content {
-    background-color: #fff;
+    
+    margin: 0 auto;
+    background-color: #b9b5b5;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     width: 250px;
     align-items: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .qr-popup-content span {
-    display: block;
+    display: flex;
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -100,5 +102,8 @@ button:hover {
 }
 
 .qr-popup-content button:hover {
-    background-color: #0056b3;
+    background-color: #06056e;
 }
+#qrcode img {
+    font-size:50px;
+  }
