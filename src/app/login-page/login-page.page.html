@@ -1,27 +1,35 @@
-
-<ion-content [fullscreen]>
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">LoginPage</ion-title>
-      <link rel="stylesheet" href="login_page.css">
-      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-      </ion-toolbar>
-      </ion-header>
-      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login_page.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
   <div id="recover-popup" class="recover-popup">
     <div class="recover-container">
-      <span class="close-btn" id="close-popup">&times;</span>
+      <span class="close-btn" id="close-popup" onclick="closePopup()">&times;</span>
       <h2>Recover Account</h2>
       <form action="/recover_password" method="post">
         <div class="input-box">
-
           <input type="text" id="idno" name="idno" placeholder="ID Number" required>
         </div>
         <label for="birthday">Birthdate</label>
         <input type="date" id="birthday" name="birthday" placeholder="Birthday" required>
         <input type="email" id="email" name="email" placeholder="E.g. firstname.lastname@zdspgc.edu.ph" required>
-        <input type="password" id="new_password" name="new_password" placeholder="New Password" required>
-        <input type="password" id="repeat_password" name="repeat_password" placeholder="Retype Password" required>
+        
+        <div class="input-box">
+          <input type="password" id="new_password" name="new_password" placeholder="New Password" required>
+          <i class='bx bx-hide visibility-toggle' onclick="togglePassword('new_password', this)"></i>
+        </div>
+        
+        <div class="input-box">
+          <input type="password" id="repeat_password" name="repeat_password" placeholder="Retype Password" required>
+          <i class='bx bx-hide visibility-toggle' onclick="togglePassword('repeat_password', this)"></i>
+        </div>
+        
         <button type="submit">Submit</button>
       </form>
     </div>
@@ -44,20 +52,20 @@
     <form action="">
       <h1>Log In</h1>
       <div class="input-box">
-        <input type="text" placeholder="Username" required aria-label="Username">
+        <input type="text" placeholder="Email" required aria-label="Email">
         <i class='bx bxs-user'></i>
       </div>
      
       <div class="input-box">
-        <input type="password" placeholder="Password" required aria-label="Password">
-        <i class='bx bxs-lock-alt'></i>
+        <input type="password" id="login_password" placeholder="Password" required aria-label="Password">
+        <i class='bx bx-hide visibility-toggle' onclick="togglePassword('login_password', this)"></i>
       </div>
 
       <div class="remember-forgot">
         <label>
           <input type="checkbox"> Remember me
         </label>
-        <a href="#" id="forgot-password">Forgot My Password</a>
+        <a href="#" id="forgot-password" onclick="hidePasswordIcons()">Forgot My Password</a>
       </div>
 
       <button type="submit" class="btn">Login</button>
@@ -69,4 +77,5 @@
   </div>
 
   <script src="login_page.js"></script>
-</ion-content>
+</body>
+</html>
