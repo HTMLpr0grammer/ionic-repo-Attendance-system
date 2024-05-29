@@ -266,3 +266,95 @@ body {
     font-size: 20px;
     cursor: pointer;
 }
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  z-index: 9999;
+  user-select: none;
+  color: #fff; /* White color for the snowflakes */
+  opacity: 0.9;
+  font-size: 1em;
+  will-change: transform;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+/* Specific snowflakes animations */
+.snowflake:nth-of-type(1) {
+  left: 10%;
+  animation-duration: 10s;
+  animation-delay: 0s;
+  font-size: 1.5em;
+}
+
+.snowflake:nth-of-type(2) {
+  left: 20%;
+  animation-duration: 12s;
+  animation-delay: 1s;
+  font-size: 1.8em;
+}
+
+.snowflake:nth-of-type(3) {
+  left: 30%;
+  animation-duration: 14s;
+  animation-delay: 2s;
+  font-size: 1.3em;
+}
+
+.snowflake:nth-of-type(4) {
+  left: 40%;
+  animation-duration: 16s;
+  animation-delay: 3s;
+  font-size: 1.7em;
+}
+
+.snowflake:nth-of-type(5) {
+  left: 50%;
+  animation-duration: 18s;
+  animation-delay: 4s;
+  font-size: 2em;
+}
+
+.snowflake:nth-of-type(6) {
+  left: 60%;
+  animation-duration: 20s;
+  animation-delay: 5s;
+  font-size: 1.4em;
+}
+
+.snowflake:nth-of-type(7) {
+  left: 70%;
+  animation-duration: 22s;
+  animation-delay: 6s;
+  font-size: 1.6em;
+}
+
+.snowflake:nth-of-type(8) {
+  left: 80%;
+  animation-duration: 24s;
+  animation-delay: 7s;
+  font-size: 1.9em;
+}
+
+.snowflake:nth-of-type(9) {
+  left: 90%;
+  animation-duration: 26s;
+  animation-delay: 8s;
+  font-size: 1.2em;
+}
+
+.snowflake:nth-of-type(10) {
+  left: 100%;
+  animation-duration: 28s;
+  animation-delay: 9s;
+  font-size: 1.5em;
+}
