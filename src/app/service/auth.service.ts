@@ -7,7 +7,21 @@ import firebase from 'firebase/compat';
   providedIn: 'root'
 })
 export class AuthService {
+  isLoggedIn: boolean = false; // Track authentication status
+  
   constructor(private afAuth: AngularFireAuth, private firestore: AngularFirestore) {}
+
+
+  teachRegist() {
+    // Implement login logic
+    this.isLoggedIn = true;
+  }
+
+  teachLogout() {
+    // Implement logout logic
+    this.isLoggedIn = false;
+  }
+
 
   async register(email: string, password: string, fullName: string, gender: string, idNumber: string) {
     try {

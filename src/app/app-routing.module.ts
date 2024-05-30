@@ -29,6 +29,10 @@ const routes: Routes = [
   {
     path: 'teacher-registration',
     loadChildren: () => import('./teacher-registration/teacher-registration.module').then( m => m.TeacherRegistrationPageModule)
+  },
+  {
+    path: 'teacher-dashboard',
+    loadChildren: () => import('./teacher-dashboard/teacher-dashboard.module').then( m => m.TeacherDashboardPageModule)
   }
 ];
 @NgModule({

@@ -15,6 +15,9 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 // Import environment configuration
 import { environment } from '../environments/environment';
 
+import { AlertController } from '@ionic/angular';
+
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -24,7 +27,9 @@ import { environment } from '../environments/environment';
     // Initialize Firebase with your configuration
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+   
+    
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

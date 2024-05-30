@@ -8,5 +8,29 @@
 
 <ion-content class="ion-padding">
   <div class="button-container">
+    <div class="animation">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <h1>Please select your role</h1>
     <ion-button expand="block" color="primary" routerLink="registration-page">Student</ion-button>
-    <ion-button expand="block" color="secondary" routerLink="teacher-registration-page">Teacher
+    <ion-button expand="block" color="secondary" (click)="presentPasswordVerificationPopup()">Teacher</ion-button>
+
+    <script>
+      document.getElementById('recover-link').addEventListener('click', function () {
+        document.getElementById('recover-popup').style.display = 'flex';
+      });
+      document.getElementById('close-btn').addEventListener('click', function () {
+        document.getElementById('recover-popup').style.display = 'none';
+      });
+    </script>
+    
+   

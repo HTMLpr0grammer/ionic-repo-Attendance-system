@@ -16,9 +16,10 @@ const routes: Routes = [
     component: ChoicePage
   },
   {
-    path: 'teacher-registration',
-    component: TeacherRegistrationPage
+    path: 'registration-page',
+    component: RegistrationPagePage
   }
+ 
 ];
 
 @NgModule({
