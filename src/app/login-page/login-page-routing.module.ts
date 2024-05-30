@@ -13,12 +13,9 @@ const routes: Routes = [
   },
   {
     path: 'choice',
-    component: ChoicePage
+    component: ChoicePage,
   },
-  {
-    path: 'registration-page',
-    component: RegistrationPagePage
-  }
+  
  
 ];
 

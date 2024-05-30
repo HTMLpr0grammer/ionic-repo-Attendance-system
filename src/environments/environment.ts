@@ -8,14 +8,14 @@ import { getAnalytics } from "firebase/analytics";
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyDDlUO7QUY7Crqtf_Sx-b5DNbKsEPhHwME",
-    authDomain: "qr-attendance-system-56e54.firebaseapp.com",
-    databaseURL: "https://qr-attendance-system-56e54-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "qr-attendance-system-56e54",
-    storageBucket: "qr-attendance-system-56e54.appspot.com",
-    messagingSenderId: "814589980331",
-    appId: "1:814589980331:web:a5906768175a3f466351ee",
-    measurementId: "G-K64ED1X1TY"
+    apiKey: "For Database",
+    authDomain: "For Database",
+    databaseURL: "For Database",
+    projectId: "For Database",
+    storageBucket: "For Database",
+    messagingSenderId: "For Database",
+    appId: "For Database",
+    measurementId: "For Database"
 
   },  
  // apiUrl: 'http://localhost:3000/api',
