@@ -1,13 +1,63 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>LoginPage</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">LoginPage</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+<body class="body">
+  <div class="animation">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="center-container">
+    <div class="wrapper">
+      <h1>Login</h1>
+      <div class="input-box">
+        <i class="icon"></i>
+        <input type="text" placeholder="Username">
+      </div>
+      <div class="input-box">
+        <i class="icon"></i>
+        <input type="password" placeholder="Password">
+      </div>
+      <div class="remember-forgot">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
+        <a href="#" id="recover-link">Forgot Password?</a>
+      </div>
+      <button class="btn">Login</button>
+      <div class="register-link">
+        <p>Don't have an account? <a routerLink="choice">Register</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+  <div class="recover-popup" id="recover-popup">
+    <div class="recover-container">
+      <span class="close-btn" id="close-btn">&times;</span>
+      <h2>Recover Account</h2>
+      <input type="email" placeholder="Enter your email">
+      <button>Send Recovery Link</button>
+    </div>
+  </div>
 </ion-content>
+
+<script>
+  document.getElementById('recover-link').addEventListener('click', function () {
+    document.getElementById('recover-popup').style.display = 'flex';
+  });
+  document.getElementById('close-btn').addEventListener('click', function () {
+    document.getElementById('recover-popup').style.display = 'none';
+  });
+</script>

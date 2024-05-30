@@ -1,0 +1,176 @@
+/* Style for the teacher registration page */
+
+ion-header {
+    --background: #ffffff; /* White background for the header */
+    --color: #333; /* Dark text color for contrast */
+    border-bottom: 1px solid #ccc; /* Light grey border for separation */
+  }
+  
+  ion-toolbar {
+    --background: #ffffff; /* White background for the toolbar */
+    --color: #333; /* Dark text color for contrast */
+  }
+  
+  ion-title {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light grey background */
+    height: 100vh; /* Ensure the content area takes up full height */
+  }
+  
+  .registration-container {
+    width: 100%;
+    max-width: 500px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+
+  }
+  
+  ion-item {
+    margin-bottom: 20px;
+  }
+  
+  ion-input {
+    --padding-start: 10px;
+  }
+  
+  ion-label {
+    font-weight: bold;
+    color: #333; /* Dark text color for contrast */
+  }
+  
+  ion-button {
+    margin-top: 20px;
+    --border-radius: 20px;
+  }
+  
+  ion-button[type='submit'] {
+    width: 100%;
+    background: linear-gradient(45deg, #4CAF50, #66BB6A); /* Gradient button */
+    color: #ffffff; /* White text color for contrast */
+  }
+  
+  ion-button[disabled] {
+    opacity: 0.6;
+  }
+  
+  .error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+  }
+  
+  .success-message {
+    color: #28a745;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  .animation span {
+    position: fixed;
+    top: -120px;
+    height: 50px;
+    width: 50px;
+    z-index: -1;
+    animation: animate 5s linear infinite;
+  }
+
+
+
+
+  .animation span:nth-child(1) {
+    left: 60px;
+    animation-delay: 0.1s;
+    border: 5px solid cyan;
+  }
+  
+  .animation span:nth-child(2) {
+    left: 60%;
+    animation-delay: 2s;
+    width: 60px;
+    height: 60px;
+    background: #ff4293;
+  }
+  
+  .animation span:nth-child(3) {
+    left: 20%;
+    animation-delay: 3s;
+    border: 5px solid #fff;
+  }
+  
+  .animation span:nth-child(4) {
+    left: 30%;
+    animation-delay: 2s;
+    width: 80px;
+    height: 80px;
+    background: #befb46;
+  }
+  
+  .animation span:nth-child(5) {
+    left: 40%;
+    animation-delay: 5s;
+    border: 5px solid #ff4293;
+  }
+  
+  .animation span:nth-child(6) {
+    left: 50%;
+    animation-delay: 6s;
+    border: 5px solid deepskyblue;
+  }
+  
+  .animation span:nth-child(7) {
+    left: 60%;
+    animation-delay: 3s;
+    width: 100px;
+    height: 100px;
+    background: #ffd59e;
+  }
+  
+  .animation span:nth-child(8) {
+    left: 70%;
+    animation-delay: 5s;
+    border: 5px solid #befb46;
+  }
+  
+  .animation span:nth-child(9) {
+    left: 80%;
+    animation-delay: 8s;
+    width: 90px;
+    height: 90px;
+    background: cyan;
+  }
+  
+  .animation span:nth-child(10) {
+    left: 90%;
+    animation-delay: 6s;
+    border: 5px solid #fff;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translateY(0);
+      opacity: 10;
+    }
+    80% {
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(800px) rotate(360deg);
+      opacity: 0;
+    }
+  }

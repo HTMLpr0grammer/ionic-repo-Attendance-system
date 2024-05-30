@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Teacher Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <body class="body">
+    <div class="animation">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+  <div class="registration-container">
+    <form #registrationForm="ngForm" (ngSubmit)="onRegister()">
+      <ion-item>
+        <ion-label position="floating">Full Name</ion-label>
+        <ion-input type="text" [(ngModel)]="teacher.fullName" placeholder="Enter name" name="fullName" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="teacher.email" placeholder="Enter email" name="email" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="teacher.password" placeholder="Enter password" name="password" required aria-label="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Confirm Password</ion-label>
+        <ion-input type="password" [(ngModel)]="teacher.confirmPassword" placeholder="Confirm password" name="confirmPassword" required></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" type="submit" color="primary" [disabled]="!registrationForm.form.valid">Register</ion-button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('recover-link').addEventListener('click', function () {
+      document.getElementById('recover-popup').style.display = 'flex';
+    });
+    document.getElementById('close-btn').addEventListener('click', function () {
+      document.getElementById('recover-popup').style.display = 'none';
+    });
+  </script>
+  </body>
+</ion-content>

@@ -1,18 +1,24 @@
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
   production: false,
-  firebase: {
-    apiKey: "AIzaSyAAnGNEM1bkEyxCxOMB6JM4T8rHIQHPHbk",
-    authDomain: "ronsted-5debf.firebaseapp.com",
-    projectId: "ronsted-5debf",
-    storageBucket: "ronsted-5debf.appspot.com",
-    messagingSenderId: "350733936773",
-    appId: "1:350733936773:web:c2ab586b548ef7cfe761ec",
-    measurementId: "G-Z0LHQ3GXKH"
-  }
+  firebaseConfig: {
+    apiKey: "AIzaSyDDlUO7QUY7Crqtf_Sx-b5DNbKsEPhHwME",
+    authDomain: "qr-attendance-system-56e54.firebaseapp.com",
+    databaseURL: "https://qr-attendance-system-56e54-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "qr-attendance-system-56e54",
+    storageBucket: "qr-attendance-system-56e54.appspot.com",
+    messagingSenderId: "814589980331",
+    appId: "1:814589980331:web:a5906768175a3f466351ee",
+    measurementId: "G-K64ED1X1TY"
+
+  },  
+ // apiUrl: 'http://localhost:3000/api',
 };
 
 /*

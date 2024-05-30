@@ -1,22 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LoginPagePage } from './login-page.page';
+import { ChoicePage } from './choice.page';
 import { RegistrationPagePage } from '../registration-page/registration-page.page';
-import { ChoicePage } from '../choice/choice.page';
 import { TeacherRegistrationPage } from '../teacher-registration/teacher-registration.page';
 
 const routes: Routes = [
   {
-    path: '',
-    component: LoginPagePage
-  },
-  {
-    path: 'choice',
+    path: ' ',
     component: ChoicePage
   },
   {
-    path: 'teacher-registration',
+    path: 'registration-page',
+    component:RegistrationPagePage
+  },
+  {
+    path: 'teacher-registration-page',
     component: TeacherRegistrationPage
   }
 ];
@@ -25,4 +24,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class LoginPagePageRoutingModule {}
+export class ChoicePageRoutingModule {}

@@ -1,13 +1,69 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>RegistrationPage</ion-title>
+    <ion-title>Student Registration</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">RegistrationPage</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="animation">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="registration-container">
+    <form #registrationForm="ngForm" (ngSubmit)="register()">
+      <ion-item>
+        <ion-label position="floating">Full Name</ion-label>
+        <ion-input type="text" [(ngModel)]="fullName" placeholder="Enter name" name="fullName" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Gender</ion-label>
+        <ion-select [(ngModel)]="gender" name="gender" required>
+          <ion-select-option value="male">Male</ion-select-option>
+          <ion-select-option value="female">Female</ion-select-option>
+          <ion-select-option value="other">Other</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">ID Number</ion-label>
+        <ion-input type="text" [(ngModel)]="idNumber" placeholder="Enter ID number" name="idNumber" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Course</ion-label>
+        <ion-input type="text" [(ngModel)]="course" placeholder="Enter course" name="course" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="email" placeholder="Enter email" name="email" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password" placeholder="Enter password" name="password" required aria-label="password"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" type="submit" color="primary" [disabled]="!registrationForm.form.valid">Register</ion-button>
+    </form>
+  </div>
 </ion-content>
+
+<script>
+  document.getElementById('recover-link').addEventListener('click', function () {
+    document.getElementById('recover-popup').style.display = 'flex';
+  });
+  document.getElementById('close-btn').addEventListener('click', function () {
+    document.getElementById('recover-popup').style.display = 'none';
+  });
+</script>
