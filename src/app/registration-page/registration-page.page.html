@@ -19,7 +19,7 @@
   </div>
 
   <div class="registration-container">
-    <form #registrationForm="ngForm" (ngSubmit)="register()">
+    <form #registrationForm="ngForm">
       <ion-item>
         <ion-label position="floating">Full Name</ion-label>
         <ion-input type="text" [(ngModel)]="fullName" placeholder="Enter name" name="fullName" required></ion-input>
@@ -54,7 +54,8 @@
         <ion-input type="password" [(ngModel)]="password" placeholder="Enter password" name="password" required aria-label="password"></ion-input>
       </ion-item>
 
-      <ion-button expand="block" type="submit" color="primary" [disabled]="!registrationForm.form.valid">Register</ion-button>
+      <ion-button expand="block" type="submit" color="primary" routerLink="tabs">Register</ion-button>
+     
     </form>
   </div>
 </ion-content>

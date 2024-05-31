@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   {
     path: 'tabs',
@@ -33,7 +34,12 @@ const routes: Routes = [
   {
     path: 'teacher-dashboard',
     loadChildren: () => import('./teacher-dashboard/teacher-dashboard.module').then( m => m.TeacherDashboardPageModule)
-  }
+  },
+  {
+    path: 'tdashboard',
+    loadChildren: () => import('./tdashboard/tdashboard.module').then( m => m.TDashboardPageModule)
+  },
+ 
 ];
 @NgModule({
   imports: [

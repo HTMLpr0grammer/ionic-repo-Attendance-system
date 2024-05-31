@@ -8,6 +8,8 @@ import { TeacherDashboardPageRoutingModule } from './teacher-dashboard-routing.m
 
 import { TeacherDashboardPage } from './teacher-dashboard.page';
 
+import { TDashboardPageModule } from '../tdashboard/tdashboard.module';
+
 @NgModule({
   imports: [
     CommonModule,

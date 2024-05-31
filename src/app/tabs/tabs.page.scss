@@ -1,1 +1,101 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: 60%;
+    background-position: center;
+    margin: 0 auto;
+}
+
+.logo {
+    max-width: 30%;
+    
+}
+.container {
+    text-align: center;
+    width: 550px;
+    height:550px;
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+    border-radius: 8px;
+    
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 0;
+    color: #333;
+}
+
+.qr-scanner-btn {
+    width: 35%;
+    height:10%;
+    border-radius: 1%;
+    background-color: white;
+}
+
+.qr-scanner-btn i {
+    margin-right: 1px;
+}
+
+.qr-scanner-btn:hover {
+    width: 5%;
+    height: 1%;
+    background-color: #218838;
+}
+h1, h2 {
+    font-size: 35px;
+    text-align: center;
+}
+li {
+    background: #e7e7e7;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 70%;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+    
+}
+
+sidebar .footer {
+    text-align: center;
+}

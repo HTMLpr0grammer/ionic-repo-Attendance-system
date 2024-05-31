@@ -22,13 +22,17 @@ export class RegistrationPagePage implements OnInit {
   ngOnInit() {
   }
 
+  Register() {
+    // Add your registration logic here
+    console.log('Teacher registered:', this.fullName);
+  }
   async register() {
     try {
       await this.authService.register(this.email, this.fullName, this.gender, this.idNumber, this.course,);
-      this.router.navigate(['/home-page']);
+      this.router.navigate(['/tabs']);
     } catch (error) {
       console.error("Registration Error: ", error);
-      // Optionally show an error message to the user
+       //Optionally show an error message to the user
     }
   }
 }

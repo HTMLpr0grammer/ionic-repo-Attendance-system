@@ -42,7 +42,7 @@
         <ion-input type="password" [(ngModel)]="teacher.confirmPassword" placeholder="Confirm password" name="confirmPassword" required></ion-input>
       </ion-item>
 
-      <ion-button expand="block" type="submit" color="primary" [disabled]="!registrationForm.form.valid">Register</ion-button>
+      <ion-button expand="block" type="submit" color="primary" [disabled]="!registrationForm.form.valid" routerLink="teacherDashboard">Register</ion-button>
     </form>
   </div>
   <script>
