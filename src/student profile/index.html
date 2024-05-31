@@ -1,0 +1,87 @@
+<ion-content>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <h2>SUBJECTS</h2>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" data-subject="Programming 2">Programming 2</a></li>
+                    <li><a href="#" data-subject="PathFit 2">PathFit 2</a></li>
+                    <li><a href="#" data-subject="ROTC 2">ROTC 2</a></li>
+                    <li><a href="#" data-subject="Professional Issues in Information System">Professional Issues in Information System</a></li>
+                    <li><a href="#" data-subject="Human Computer Interaction">Human Computer Interaction</a></li>
+                </ul>
+            </nav>
+            <footer class="footer">
+                <p>&copy; 2024 Student Attendance System</p>
+            </footer>
+        </aside>
+        <main class="main-content">
+            <div class="attendance-record">
+                <h2>Attendance Record</h2>
+                <div class="selected-subject"></div>
+                <div class="record-options">
+                    <div class="show-entries">
+                        <label for="entries">Show entries:</label>
+                        <select id="entries" name="entries">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                    <div class="search">
+                        <input type="text" id="search" name="search" placeholder="Search...">
+                        <button>Search</button>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Student No</th>
+                            <th>First Name</th>
+                            <th>Middle Name</th>
+                            <th>Last Name</th>
+                            <th>Remarks</th>
+                            <th>Course</th>
+                            <th>Subject</th>
+                            <th>Time In</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>22S1226</td>
+                            <td>Blaise Tyrel</td>
+                            <td>Billones</td>
+                            <td>Daga</td>
+                            <td><div class="circle"></div></td>
+                            <td>BSIS</td>
+                            <td>Programming 2</td>
+                            <td>1:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <p>Showing 1 to 10 of 15 entries</p>
+                    <div class="nav-buttons">
+                        <button>Previous</button>
+                        <button>Next</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</ion-content>
+
+<script>
+    document.querySelectorAll('.nav ul li a').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            var subject = this.getAttribute('data-subject');
+            document.querySelector('.selected-subject').textContent = subject;
+        });
+    });
+</script>
