@@ -1,15 +1,60 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-teacher-dashboard',
-  templateUrl: './teacher-dashboard.page.html',
-  styleUrls: ['./teacher-dashboard.page.scss'],
+  templateUrl: 'teacher-dashboard.page.html',
+  styleUrls: ['teacher-dashboard.page.scss']
 })
-export class TeacherDashboardPage implements OnInit {
+export class TeacherDashboardPage {
+  students = [
+    {
+      studentNo: '',
+      firstName: '',
+      middleName: '',
+      lastName: '',
+      remarks: '',
+      course: '',
+      subject: '',
+      timeIn: ''
+    }
+  ];
 
-  constructor() { }
+  isModalOpen = false;
 
-  ngOnInit() {
+  newStudent = {
+    studentNo: '',
+    firstName: '',
+    middleName: '',
+    lastName: '',
+    remarks: '',
+    course: '',
+    subject: '',
+    timeIn: ''
+  };
+
+  constructor() {}
+
+  openAddStudentModal() {
+    this.isModalOpen = true;
   }
 
+  closeAddStudentModal() {
+    this.isModalOpen = false;
+  }
+
+  addStudent(event: Event) {
+    event.preventDefault();
+    this.students.push({ ...this.newStudent });
+    this.newStudent = {
+      studentNo: '',
+      firstName: '',
+      middleName: '',
+      lastName: '',
+      remarks: '',
+      course: '',
+      subject: '',
+      timeIn: ''
+    };
+    this.closeAddStudentModal();
+  }
 }

@@ -6,14 +6,11 @@
       </div>
       <nav class="nav">
         <ul>
-          
-          
-          
-          <li><a href="#">Programming 2</a></li>
-          <li><a href="#">PathFit 2</a></li>
-          <li><a href="#">ROTC 2</a></li>
-          <li><a href="#">Professional Issues in Information System</a></li>
-          <li><a href="#">Human Computer Interaction</a></li>
+          <li><a href="#" data-subject="Programming 2">Programming 2</a></li>
+          <li><a href="#" data-subject="PathFit 2">PathFit 2</a></li>
+          <li><a href="#" data-subject="ROTC 2">ROTC 2</a></li>
+          <li><a href="#" data-subject="Professional Issues in Information System">Professional Issues in Information System</a></li>
+          <li><a href="#" data-subject="Human Computer Interaction">Human Computer Interaction</a></li>
         </ul>
       </nav>
       <footer class="footer">
@@ -23,6 +20,7 @@
     <main class="main-content">
       <div class="attendance-record">
         <h2>Attendance Record</h2>
+        <div class="selected-subject"></div>
         <div class="record-options">
           <div class="show-entries">
             <label for="entries">Show entries:</label>
@@ -37,6 +35,7 @@
             <input type="text" id="search" name="search" placeholder="Search...">
             <button>Search</button>
           </div>
+          <button (click)="openAddStudentModal()" class="add-student">Add Student</button>
         </div>
         <table>
           <thead>
@@ -53,21 +52,21 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>22S1226</td>
-              <td>Blaise Tyrel</td>
-              <td>Billones</td>
-              <td>Daga</td>
+            <tr *ngFor="let student of students; let i = index">
+              <td>{{ i + 0 }}</td>
+              <td>{{ student.studentNo }}</td>
+              <td>{{ student.firstName }}</td>
+              <td>{{ student.middleName }}</td>
+              <td>{{ student.lastName }}</td>
               <td><div class="circle"></div></td>
-              <td>BSIS</td>
-              <td>Programming 2</td>
-              <td>1:00</td>
+              <td>{{ student.course }}</td>
+              <td>{{ student.subject }}</td>
+              <td>{{ student.timeIn }}</td>
             </tr>
           </tbody>
         </table>
         <div class="pagination">
-          <p>Showing 1 to 10 of 15 entries</p>
+          <p>Showing {{ students.length }} entries</p>
           <div class="nav-buttons">
             <button>Previous</button>
             <button>Next</button>
@@ -77,5 +76,30 @@
     </main>
   </div>
 
- 
+  <!-- Add Student Form Modal -->
+  <div id="addStudentModal" class="modal" [class.show]="isModalOpen">
+    <div class="modal-content">
+      <span (click)="closeAddStudentModal()" class="close">&times;</span>
+      <h2><b>Add Student</b></h2>
+      <form (submit)="addStudent($event)">
+        <label for="studentNo">Student No:</label>
+        <input type="text" id="studentNo" name="studentNo" [(ngModel)]="newStudent.studentNo" required autocomplete="off"><br>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" [(ngModel)]="newStudent.firstName" required autocomplete="off"><br>
+        <label for="middleName">Middle Name:</label>
+        <input type="text" id="middleName" name="middleName" [(ngModel)]="newStudent.middleName" required autocomplete="off"><br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="newStudent.lastName" required autocomplete="off"><br>
+        <label for="remarks">Remarks:</label>
+        <input type="text" id="remarks" name="remarks" [(ngModel)]="newStudent.remarks" required autocomplete="off"><br>
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course" [(ngModel)]="newStudent.course" required autocomplete="off"><br>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" [(ngModel)]="newStudent.subject" required autocomplete=""><br>
+        <div>
+        <button id="buttons" type="submit">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </ion-content>
