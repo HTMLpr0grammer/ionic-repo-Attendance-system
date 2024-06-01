@@ -49,11 +49,12 @@
               <th>Course</th>
               <th>Subject</th>
               <th>Time In</th>
+              <th>Action</th> <!-- Added table header for action -->
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let student of students; let i = index">
-              <td>{{ i + 0 }}</td>
+              <td>{{ i + 1 }}</td>
               <td>{{ student.studentNo }}</td>
               <td>{{ student.firstName }}</td>
               <td>{{ student.middleName }}</td>
@@ -62,6 +63,7 @@
               <td>{{ student.course }}</td>
               <td>{{ student.subject }}</td>
               <td>{{ student.timeIn }}</td>
+              <td><button (click)="removeStudent(i)">Remove</button></td> <!-- Added remove button -->
             </tr>
           </tbody>
         </table>
@@ -96,8 +98,10 @@
         <input type="text" id="course" name="course" [(ngModel)]="newStudent.course" required autocomplete="off"><br>
         <label for="subject">Subject:</label>
         <input type="text" id="subject" name="subject" [(ngModel)]="newStudent.subject" required autocomplete=""><br>
+        <label for="timeIn">Time In:</label>
+        <input type="text" id="timeIn" name="timeIn" [(ngModel)]="newStudent.timeIn" disabled autocomplete="off"><br> <!-- This is the added field -->
         <div>
-        <button id="buttons" type="submit">Add</button>
+          <button id="buttons" type="submit">Add</button>
         </div>
       </form>
     </div>
